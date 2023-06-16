@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Ramil</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="login_now">Login now</string>
+    <string name="register_here">Register Here</string>
+    <string name="logout">LOGOUT</string>
+    <string name="current_trip">Current Trip</string>
+    <string name="previous_trips">Previous Trips</string>
+    <string name="sos">SOS</string>
+    <string name="new_trip">New Trip</string>
+    <string name="someone_gmail_com">someone@gmail.com</string>
+
+    <string name="amc">Any medical conditions</string>
+    <string name="kids">Kids on trip</string>
+    <string name="estimated_kilometers">Estimated Kilometers</string>
+    <string name="number_of_persons">Number of persons</string>
+    <string name="save">Save</string>
+    <string name="if_yes_please_specify_optional">If yes please specify (optional)</string>
+    <string name="secondary_phone_optional">Secondary Phone (optional)</string>
+    <string name="primary_phone_number">Primary Phone number</string>
+    <string name="roadside_aids">Roadside aids</string>
+    <string name="first_aid_tools">First Aid tools</string>
+    <string name="trip_equipment">TRIP EQUIPMENT</string>
+    <string name="individuals_group_contact_form">individuals/group Contact Form</string>
+    <string name="current_trip_page">Current trip page</string>
+    <string name="date">date</string>
+    <string name="title">title</string>
+</resources>

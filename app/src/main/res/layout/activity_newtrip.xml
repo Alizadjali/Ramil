@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:padding="2dp"
+    android:background="@drawable/forinfo"
+    tools:context=".newtrip">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="95dp"
+            android:text="New trip info"
+            android:textSize="33sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:text="select trip date"
+            android:textSize="18sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/datebtn"
+            android:layout_width="218dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/cbtn"
+            android:text="Select trip date"
+            android:textSize="15sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/txrange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/tripname"
+            android:layout_width="320dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:autofillHints="KM: "
+
+            android:hint="Trip Name"
+            android:inputType="text"
+            android:paddingLeft="26dp"
+            android:paddingRight="26dp" />
+
+        <EditText
+            android:id="@+id/tripdest"
+            android:layout_width="320dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:autofillHints="KM: "
+
+            android:hint="Trip destination"
+            android:inputType="text"
+            android:paddingLeft="26dp"
+            android:paddingRight="26dp" />
+
+        <EditText
+            android:id="@+id/kmed"
+            android:layout_width="320dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:autofillHints="KM: "
+
+            android:hint="@string/estimated_kilometers"
+            android:inputType="number"
+            android:paddingLeft="26dp"
+            android:paddingRight="26dp" />
+
+
+        <EditText
+            android:id="@+id/nped"
+            android:layout_width="320dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:autofillHints=""
+
+            android:hint="@string/number_of_persons"
+            android:inputType="number"
+            android:paddingLeft="26dp"
+            android:paddingRight="26dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="317dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="22dp"
+
+            android:hint="@string/kids"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp">
+            <AutoCompleteTextView
+                android:id="@+id/childOnTrip"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="317dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="22dp"
+
+            android:hint="@string/amc"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp">
+            <AutoCompleteTextView
+                android:id="@+id/act"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <EditText
+            android:id="@+id/sicked"
+            android:layout_width="320dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:autofillHints=""
+            android:background="@drawable/edbg"
+            android:hint="@string/if_yes_please_specify_optional"
+            android:inputType="text"
+            android:paddingLeft="26dp"
+            android:paddingRight="26dp" />
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="370dp"
+            android:layout_height="205dp"
+            android:layout_margin="-4dp"
+
+            app:cardBackgroundColor="#10000000"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp"
+            app:cardMaxElevation="12dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/individuals_group_contact_form"
+                android:textSize="18sp" />
+
+
+            <EditText
+                android:id="@+id/pmobile"
+                android:layout_width="320dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="28dp"
+                android:autofillHints=""
+                android:background="@drawable/edbg"
+                android:hint="@string/primary_phone_number"
+                android:inputType="number"
+                android:paddingLeft="26dp"
+                android:paddingRight="26dp" />
+
+
+            <EditText
+                android:id="@+id/smobile"
+                android:layout_width="320dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="94dp"
+                android:autofillHints=""
+                android:background="@drawable/edbg"
+                android:hint="@string/secondary_phone_optional"
+                android:inputType="number"
+                android:paddingLeft="26dp"
+                android:paddingRight="26dp" />
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/trip_equipment"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="317dp"
+                android:layout_height="60dp"
+                android:layout_margin="18dp"
+                android:layout_marginTop="10dp"
+
+                android:background="@color/edColor"
+                android:hint="@string/first_aid_tools"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusTopStart="10dp">
+                <AutoCompleteTextView
+                    android:id="@+id/firstaid"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_gravity="center"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="317dp"
+            android:layout_height="60dp"
+            android:layout_margin="18dp"
+            android:background="@color/edColor"
+            android:hint="@string/roadside_aids"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/roadaids"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/savbt"
+            android:layout_width="218dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/cbtn"
+            android:text="@string/save"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:layout_marginTop="25dp"/>
+
+
+
+
+    </LinearLayout>
+</ScrollView>

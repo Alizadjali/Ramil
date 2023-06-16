@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "957821492233",
+    "firebase_url": "https://ramil-d144f-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "ramil-d144f",
+    "storage_bucket": "ramil-d144f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:957821492233:android:b1ca0e202a2a360d202cd8",
+        "android_client_info": {
+          "package_name": "com.example.ramil"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "957821492233-to0ki1uicvg67su2n6jqnrvasadm7iqf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANTUBUbahVXvOh5Nz7m8oDbmiNV0wSrvk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "957821492233-n0734kpvfb91lfsj0ulpvhdjfig1apon.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:957821492233:android:1269f745c966ab69202cd8",
+        "android_client_info": {
+          "package_name": "com.example.ramiladmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "957821492233-to0ki1uicvg67su2n6jqnrvasadm7iqf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANTUBUbahVXvOh5Nz7m8oDbmiNV0wSrvk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "957821492233-n0734kpvfb91lfsj0ulpvhdjfig1apon.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
