@@ -70,13 +70,11 @@ public class newtrip extends AppCompatActivity {
         roadaids = findViewById(R.id.roadaids);//6
         tripdest = findViewById(R.id.tripdest);
 
-
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         //date-picker code
         MaterialDatePicker datePicker=MaterialDatePicker.Builder.dateRangePicker()
                 .setSelection(Pair.create(MaterialDatePicker.thisMonthInUtcMilliseconds(),
                         MaterialDatePicker.todayInUtcMilliseconds())).setTheme(R.style.ThemeOverlay_App_MaterialCalendar).build();
-
         //drop down list code
         adapterItems = new ArrayAdapter<String>(this,R.layout.cond_item,items);
         act.setAdapter(adapterItems);
@@ -97,13 +95,12 @@ public class newtrip extends AppCompatActivity {
             }
         });
         //the new method here start
-
         savbt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //send trip date to firebase 18F17860
 
-                //I delete .child("UserTripData") on June 8
+                //DB reference
                 DatabaseReference myRef = database.getReference("users")
                         .child(mAuth.getCurrentUser().getUid()).push();
 
@@ -120,8 +117,6 @@ public class newtrip extends AppCompatActivity {
                 AutoCompleteTextView autoCompleteTextView1 = (AutoCompleteTextView) childOnTrip;
                 AutoCompleteTextView autoCompleteTextView2 = (AutoCompleteTextView) firstaid;
                 AutoCompleteTextView autoCompleteTextView3 = (AutoCompleteTextView) roadaids;
-
-
                 //step2
                 String act = autoCompleteTextView.getText().toString();
                 String txdate = textView.getText().toString();
@@ -135,10 +130,6 @@ public class newtrip extends AppCompatActivity {
                 String childOnTrip = autoCompleteTextView1.getText().toString();
                 String firstaid = autoCompleteTextView2.getText().toString();
                 String roadaids = autoCompleteTextView3.getText().toString();
-
-
-
-
                 //step3
                 myRef.child("TripDate").setValue(txdate);
                 myRef.child("TripDestination").setValue(tripdest);
@@ -152,9 +143,6 @@ public class newtrip extends AppCompatActivity {
                 myRef.child("SecondaryPhone").setValue(smobile);
                 myRef.child("FirstAidKit").setValue(firstaid);
                 myRef.child("RoadAids").setValue(roadaids);
-
-
-
 
                 Toast.makeText(getApplicationContext(),"Trip data saved",Toast.LENGTH_LONG).show();
 

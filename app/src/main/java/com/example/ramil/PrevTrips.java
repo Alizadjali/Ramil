@@ -27,19 +27,12 @@ public class PrevTrips extends AppCompatActivity {
     DatabaseReference databaseReference;
     ValueEventListener eventListener;
     FirebaseUser user;
-    //FirebaseAuth mAuth;
-    //adding uid string for test
     String uid;
-    //String getKey;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prev_trips);
-
-
         // here I added user and uid to test
         recyclerView = findViewById(R.id.rcv860);
         user = FirebaseAuth.getInstance().getCurrentUser();
@@ -58,18 +51,13 @@ public class PrevTrips extends AppCompatActivity {
         MyAdp adp = new MyAdp(PrevTrips.this, dataClassList);
         recyclerView.setAdapter(adp);
         //link database
-
-
         databaseReference = FirebaseDatabase.getInstance().getReference("users").child(user.getUid());
-
         dialog.show();
-
-        //comment
 
         eventListener = databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                dataClassList.clear(); //intel here every thing is okay
+                dataClassList.clear(); //link adp
                 for (DataSnapshot itemSnapshot: snapshot.getChildren())
                 {
                     retDataClass retdataClass = itemSnapshot.getValue(retDataClass.class);

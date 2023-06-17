@@ -5,14 +5,10 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.List;
 
 public class MyAdp extends RecyclerView.Adapter<MyViewHolder> {
@@ -23,7 +19,6 @@ public class MyAdp extends RecyclerView.Adapter<MyViewHolder> {
         this.context = context;
         this.dataClassList = dataClassList;
     }
-
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -54,30 +49,23 @@ public class MyAdp extends RecyclerView.Adapter<MyViewHolder> {
              intent.putExtra("DiseaseType",dataClassList.get(holder.getAdapterPosition()).getDiseaseType());
              intent.putExtra("phonePrim",dataClassList.get(holder.getAdapterPosition()).getPrimaryPhone());
              intent.putExtra("phoneSec",dataClassList.get(holder.getAdapterPosition()).getSecondaryPhone());
-             //con
 
              context.startActivity(intent);
          }
      });
     }
-
     @Override
     public int getItemCount() {
 
         return dataClassList.size();
     }
 }
-
-
 class MyViewHolder extends RecyclerView.ViewHolder{
 
     TextView recdate,recdes;
     CardView cardOFrec;
-
-
     public MyViewHolder(@NonNull View itemView) {
         super(itemView);
-
         recdes = itemView.findViewById(R.id.recdes);
         recdate = itemView.findViewById(R.id.recdate);
         cardOFrec = itemView.findViewById(R.id.cardOFrec);
