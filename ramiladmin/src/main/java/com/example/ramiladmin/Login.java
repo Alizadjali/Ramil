@@ -27,7 +27,6 @@ public class Login extends AppCompatActivity {
     Button loginbutton;
     EditText email, password;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,17 +34,13 @@ public class Login extends AppCompatActivity {
 
         FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
 
-
         loginbutton = findViewById(R.id.lgoinbtn);
         email = findViewById(R.id.usernametext);
         password = findViewById(R.id.passwordtext);
 
-
         loginbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
 
                 loginbutton.setOnClickListener(new View.OnClickListener() {
                @Override
