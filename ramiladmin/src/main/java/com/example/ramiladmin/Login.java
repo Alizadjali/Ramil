@@ -87,43 +87,7 @@ public class Login extends AppCompatActivity {
 
                            }
                        });
-//
-//                       userAdminQuery.addListenerForSingleValueEvent(new ValueEventListener() {
-//                           @Override
-//                           public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                               System.out.println(snapshot.getKey()+snapshot.getValue());
-//                               if(snapshot.exists()){
-//                                   Toast.makeText(getApplicationContext(),"Logged in successfully",Toast.LENGTH_LONG).show();
-//                                   Intent intent = new Intent(Login.this,Home.class);
-//                                   startActivity(intent);
-//                               }
-//                               else{
-//                                   Toast.makeText(getApplicationContext(),"Denied: You aren't Admin",Toast.LENGTH_LONG).show();
-//                               }
-//
-//                           }
-//
-//                           @Override
-//                           public void onCancelled(@NonNull DatabaseError error) {
-//
-//                           }
-//                       });
 
-//                       firebaseAuth.signInWithEmailAndPassword(emailstring, passwordstring)
-//                               .addOnCompleteListener(task -> {
-//                                   if (task.isSuccessful()) {
-//
-//
-//
-//
-//                                   } else {
-//
-//                                       Exception exception = task.getException();
-//                                       Toast.makeText(getApplicationContext(),"Login Faild: "+exception.getMessage(),Toast.LENGTH_LONG).show();
-//
-//
-//                                   }
-//                               });
                    }
 
                }

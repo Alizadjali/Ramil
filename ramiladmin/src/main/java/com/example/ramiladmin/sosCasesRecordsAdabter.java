@@ -42,10 +42,6 @@ public class sosCasesRecordsAdabter extends RecyclerView.Adapter<sosCasesRecords
     @Override
     public void onBindViewHolder(@NonNull RecordViewHolder holder, int position) {
         sosRecords record = recordList.get(position);
-
-//        holder.longitudeTextView.setText(String.valueOf(record.getLongitude()));
-//        holder.latitudeTextView.setText(String.valueOf(record.getLatitude()));
-//        holder.tripIdTextView.setText(record.getTripId());
         holder.usernameTextView.setText(record.getEmail());
     }
 
@@ -90,13 +86,11 @@ public class sosCasesRecordsAdabter extends RecyclerView.Adapter<sosCasesRecords
                     }
             );
 
-
             // Closing Cases
             closeButton.setOnClickListener(v ->{
                 DatabaseReference databaseReference;
                 int position = getAdapterPosition();
                 sosRecords selectedRecord = recordList.get(position);
-//                UserRecord userRecord = FirebaseAuth.getInstance().getUserByEmail(selectedRecord.getEmail());
 
                 databaseReference = FirebaseDatabase.getInstance().getReference("soscases").child(selectedRecord.getUserId()).child("isActive");
                 databaseReference.setValue(false)
@@ -116,9 +110,6 @@ public class sosCasesRecordsAdabter extends RecyclerView.Adapter<sosCasesRecords
 
                             }
                         });
-//
-
-
 
         });
 
